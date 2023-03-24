@@ -158,6 +158,13 @@ footer a {
   padding: 10px;
 }
 
+.erro-geolocalizacao {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
 @keyframes handMove {
   0% {
     transform: translateX(0);

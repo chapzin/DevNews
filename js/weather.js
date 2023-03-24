@@ -59,9 +59,16 @@ window.onload = function () {
       (error) => {
         console.error(error);
         previsaoTempo.textContent = "Não foi possível obter a localização";
+        previsaoTempo.classList.add("erro-geolocalizacao");
       }
     );
   } else {
     previsaoTempo.textContent = "Geolocalização não suportada pelo navegador";
+    if ("geolocation" in navigator) {
+      // ...
+    } else {
+      previsaoTempo.textContent = "Geolocalização não suportada pelo navegador";
+      previsaoTempo.classList.add("erro-geolocalizacao");
+    }
   }
 };
